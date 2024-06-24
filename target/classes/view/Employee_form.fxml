@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneHolder" prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Employee_formController">
+   <children>
+      <Label layoutX="491.0" layoutY="4.0" prefHeight="20.0" prefWidth="105.0" text="Employee Page">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="559.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest.icon/Employee%20icon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtEmployeeId" layoutX="44.0" layoutY="149.0" onKeyReleased="#txtEmployeeIdKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: E001" />
+      <TextField fx:id="txtName" layoutX="328.0" layoutY="148.0" onKeyReleased="#txtEmployeeNameKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: Sahan" />
+      <Label layoutX="124.0" layoutY="119.0" text="Employee Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="426.0" layoutY="119.0" text="Name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtContactNumber" layoutX="328.0" layoutY="213.0" onKeyReleased="#txtContactNumberKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: 0751860097" />
+      <TextField fx:id="txtAdress" layoutX="44.0" layoutY="213.0" onKeyReleased="#txtAddressKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: Galle" />
+      <Label layoutX="397.0" layoutY="192.0" text="Contact number">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="136.0" layoutY="192.0" text="Address">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmployee" layoutX="34.0" layoutY="329.0" prefHeight="200.0" prefWidth="535.0">
+         <columns>
+            <TableColumn fx:id="colEmployeeId" text="Employee Id" />
+            <TableColumn fx:id="colName" prefWidth="145.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="200.0" text="Address" />
+            <TableColumn fx:id="colContactNumber" prefWidth="110.0" text="Contact number" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="Clearbtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="80.0" layoutY="268.0" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #7f8c8d;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Savebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="439.0" layoutY="269.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Updatebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="316.0" layoutY="269.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #e67e22;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Deletebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="198.0" layoutY="268.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="EmployeeAttendanceBtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="396.0" layoutY="535.0" onAction="#btnEmployeeAttendanceOnAction" prefHeight="35.0" prefWidth="184.0" style="-fx-background-color: #3c6e71;" text="Employee Attendance" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

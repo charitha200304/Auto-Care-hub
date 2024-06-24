@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Point_DetailsController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="580.0" prefWidth="597.0">
+         <children>
+            <Label layoutX="155.0" layoutY="194.0" text="Point  Id:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="407.0" layoutY="102.0" text="Total point:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerId" layoutX="151.0" layoutY="89.0" text="Customer Id:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblServiceHistoryId" layoutX="388.0" layoutY="177.0" text="Service History Id:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtId" layoutX="69.0" layoutY="217.0" onKeyReleased="#txtPointIdKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: P001" />
+            <TextField fx:id="TxtTotalPoint" layoutX="328.0" layoutY="124.0" onKeyReleased="#txtTotalPointKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: 10" />
+            <JFXButton fx:id="Clearbtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="83.0" layoutY="281.0" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #7f8c8d;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/clear.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Savebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="442.0" layoutY="282.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Updatebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="319.0" layoutY="282.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #e67e22;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Deletebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="201.0" layoutY="281.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <TableView fx:id="colTablePontDetail" layoutX="31.0" layoutY="355.0" prefHeight="200.0" prefWidth="535.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="135.0" text="Id" />
+                  <TableColumn fx:id="colTotalPoint" prefWidth="135.0" text="Total Pont" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="135.0" text="Customer Id" />
+                  <TableColumn fx:id="colServiceHistoryId" prefWidth="135.0" text="Service History Id" />
+               </columns>
+            </TableView>
+            <Label layoutX="481.0" layoutY="2.0" text="Point Detail Page">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="33.0" fitWidth="31.0" layoutX="561.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/point%20icon.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="cmbCustomerId" layoutX="73.0" layoutY="126.0" prefHeight="33.0" prefWidth="230.0" promptText="Ex: C001" />
+            <JFXComboBox fx:id="cmbServiceId" layoutX="327.0" layoutY="214.0" prefHeight="33.0" prefWidth="230.0" promptText="Ex: SH001" />
+            <Label layoutX="31.0" layoutY="30.0" text="Contact : ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtContact" layoutX="91.0" layoutY="24.0" onKeyReleased="#txtPointIdKeyReleased" prefHeight="20.0" prefWidth="175.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" />
+            <Button layoutX="272.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnSearchOnAction" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: gray; -fx-border-color: white; -fx-background-radius: 30; -fx-border-radius: 30;">
+               <graphic>
+                  <ImageView fitHeight="14.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/search%20icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TextField fx:id="txtDiscount" layoutX="31.0" layoutY="59.0" onKeyReleased="#txtCustomerConactReleased" prefHeight="25.0" prefWidth="25.0" style="-fx-background-radius: 30; -fx-border-radius: 30;" />
+            <Label fx:id="lblDiscountPoint" layoutX="61.0" layoutY="62.0" prefHeight="20.0" prefWidth="135.0" textFill="#fd0000">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

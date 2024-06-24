@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Payment_formController">
+   <children>
+      <AnchorPane layoutX="-3.0" layoutY="-2.0" prefHeight="580.0" prefWidth="597.0">
+         <children>
+            <Label layoutX="503.0" layoutY="2.0" text="Payment Page">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="40.0" layoutX="556.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/Payment%20icon.png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="txtDate" layoutX="59.0" layoutY="153.0" prefHeight="33.0" prefWidth="230.0" promptText="Ex: 2024/05/16" />
+            <JFXComboBox fx:id="cmbPaymentMethod" layoutX="312.0" layoutY="153.0" prefHeight="33.0" prefWidth="230.0" promptText="Ex: cash or card" />
+            <JFXComboBox fx:id="cmbCustomerId" layoutX="60.0" layoutY="210.0" prefHeight="33.0" prefWidth="230.0" promptText="Ex: C001" />
+            <Label layoutX="376.0" layoutY="136.0" text="Payment Mathod:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="139.0" layoutY="193.0" text="Customer Id:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnPrint" layoutX="504.0" layoutY="550.0" onAction="#PrintBtnOnAction" prefHeight="25.0" prefWidth="68.0" style="-fx-background-color: #3c6e71;" text="Print" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+      <JFXButton fx:id="Clearbtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="62.0" layoutY="269.0" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #7f8c8d;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Savebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="421.0" layoutY="270.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Updatebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="298.0" layoutY="270.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #e67e22;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Deletebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="180.0" layoutY="269.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="txtPaymentId" layoutX="54.0" layoutY="90.0" onKeyReleased="#txtPaymentIdKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: P001" />
+      <Label layoutX="131.0" layoutY="69.0" text="Payment Id:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtAmount" layoutX="309.0" layoutY="89.0" onKeyReleased="#PaymentAmountKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: 2000.00" />
+      <Label layoutX="399.0" layoutY="69.0" text="Amount:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="151.0" layoutY="132.0" text=" Date:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblPayment" layoutX="42.0" layoutY="340.0" prefHeight="200.0" prefWidth="517.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="colAmount" prefWidth="100.0" text="Amount" />
+            <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
+            <TableColumn fx:id="colPaymentMethod" prefWidth="110.0" text="Payment Method" />
+            <TableColumn fx:id="colCustomerId" prefWidth="110.0" text="Customer Id" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

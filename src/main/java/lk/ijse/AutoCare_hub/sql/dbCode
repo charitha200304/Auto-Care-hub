@@ -1,0 +1,125 @@
+create database Service_Management_System;
+
+use Service_Management_System;
+
+create table Customer(
+Cus_id varchar(50)primary key,
+Name varchar(100),
+Date date,
+Contact_number varchar(50)
+);
+
+
+create table Vehicle(
+V_id varchar(50)primary key,
+Model varchar(100),
+Type varchar(100),
+Cus_id varchar(50),
+foreign key(Cus_id) references Customer(Cus_id) on update cascade on delete cascade
+);
+
+
+create table Service_History(
+SH_id varchar(50)Primary key,
+Description varchar(50),
+V_id varchar(50),
+foreign key(V_id) references Vehicle(V_id) on update cascade on delete cascade
+);
+
+
+create table Service(
+Service_id varchar(50)primary key,
+Cost Decimal,
+Date date,
+V_id varchar(50),
+foreign key(V_id) references Vehicle(V_id) on update cascade on delete cascade
+);
+
+
+create table Point_System(
+Point_id varchar(50)primary key,
+Total_point Decimal,
+Cus_id varchar(50),
+SH_id varchar(50),
+foreign key(SH_id) references Service(Service_id) on update cascade on delete cascade,
+foreign key(Cus_id) references Customer(Cus_id) on update cascade on delete cascade
+);
+
+
+create table Feedback(
+F_id varchar(50) primary key,
+Description varchar(200),
+Cus_id varchar(50),
+foreign key(Cus_id) references Customer(Cus_id) on update cascade on delete cascade
+);
+
+
+create table Inventory_item(
+Item_id varchar(50)primary key,
+Description varchar(100),
+Price Decimal,
+Qty_on_hand varchar(100)
+);
+
+
+create table Inventory_Service_Details(
+Service_id varchar(50),
+Item_id varchar(50),
+Price Decimal,
+Qty_on_hand varchar(100),
+foreign key(Service_id) references service(Service_id) on update cascade on delete cascade,
+foreign key(Item_id) references Inventory_item(Item_id) on update cascade on delete cascade
+);
+
+
+create table Employee(
+Employee_id varchar(50)primary key,
+Name varchar(50),
+Address varchar(50),
+Contact_number varchar(50)
+);
+
+
+
+
+
+
+create table Service_Employee_Details(
+Service_id varchar(50),
+Employee_id varchar(50),
+foreign key(Service_id) references Service(Service_id) on update cascade on delete cascade,
+foreign key(Employee_id) references Employee(Employee_id) on update cascade on delete cascade
+);
+
+
+create table Payment(
+Payment_id varchar(50)primary key,
+Amount Decimal,
+Date date,
+Payment_methods Varchar(50),
+Cus_id varchar(50),
+foreign key(Cus_id) references Customer(Cus_id) on update cascade on delete cascade
+);
+
+
+create table User(
+Full_name varchar(50),
+User_name varchar(50)primary key,
+Email varchar(50),
+Phone_number varchar(50),
+Password varchar(50)
+);
+
+
+create table Attendance(
+Attendance_id varchar(15)primary key,
+Employee_id varchar(15),
+Date date,
+In_time varchar(20),
+Out_time varchar(20),
+foreign key (Employee_id) references Employee(Employee_id) on update cascade on delete cascade
+);
+
+
+insert into User(Full_name,User_name,Email,Phone_number,Password)values
+('Charitha Chiranjeewa','charitha','charithachiranjeewa@gmail.com','0716855976','charitha123');

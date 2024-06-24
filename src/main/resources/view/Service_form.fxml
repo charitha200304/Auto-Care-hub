@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneHolder" prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Service_formController">
+   <children>
+      <Label layoutX="112.0" layoutY="35.0" text="Service Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="400.0" layoutY="43.0" text="Date">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="CustomerIdLbl" layoutX="42.0" layoutY="106.0" text="Vehicle Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtServiceId" layoutX="43.0" layoutY="60.0" prefHeight="33.0" prefWidth="230.0" promptText="Ex: S001" />
+      <JFXButton fx:id="Savrbtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="475.0" layoutY="262.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TableView fx:id="tblVehicle" layoutX="24.0" layoutY="319.0" prefHeight="200.0" prefWidth="542.0">
+         <columns>
+            <TableColumn fx:id="colVehicleid" prefWidth="90.0" text="Item ID" />
+            <TableColumn fx:id="colVehicleModel" prefWidth="180.0" text="Item Name" />
+            <TableColumn fx:id="colVehicleType" prefWidth="180.0" text="Total Price" />
+            <TableColumn fx:id="colCustomerId" prefWidth="90.0" text="qty" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="ServiceHistorybtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="451.0" layoutY="532.0" onAction="#btnServiceHistoryOnAction" prefHeight="33.0" prefWidth="131.0" style="-fx-background-color: #3c6e71;" text="Service History" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="509.0" layoutY="1.0" text="Service Page">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="28.0" layoutX="558.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest.icon/service%20icon.png" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cmbVehicleId" layoutX="39.0" layoutY="125.0" onAction="#cmbVehicleId" prefHeight="30.0" prefWidth="100.0" promptText="Ex: V001" />
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" contentDisplay="RIGHT" layoutX="325.0" layoutY="266.0" onAction="#btnAddToCartOnAction" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #91f086;" text="Add to cart" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbItemId" layoutX="37.0" layoutY="196.0" onAction="#cmbItemIdOnAction" prefHeight="33.0" prefWidth="100.0" promptText="Ex: I001" />
+      <Label layoutX="37.0" layoutY="178.0" text="Item ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemName" alignment="BOTTOM_CENTER" layoutX="154.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D4D4D4;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="154.0" layoutY="177.0" text="Item name">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemPrice" alignment="BOTTOM_CENTER" layoutX="265.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D4D4D4;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="267.0" layoutY="176.0" text="Item price">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblItemQty" alignment="BOTTOM_CENTER" layoutX="374.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D4D4D4;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="373.0" layoutY="175.0" text="Qty on Hand">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNetTotal" alignment="TOP_CENTER" layoutX="85.0" layoutY="534.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D4D4D4;" />
+      <Label layoutX="487.0" layoutY="175.0" text="Use qty">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="538.0" text="Net total">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQty" layoutX="482.0" layoutY="200.0" prefHeight="30.0" prefWidth="100.0" />
+      <Label fx:id="lblDate" alignment="BOTTOM_CENTER" layoutX="348.0" layoutY="62.0" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #D4D4D4;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblModel" alignment="BOTTOM_CENTER" layoutX="193.0" layoutY="133.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D4D4D4;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="193.0" layoutY="110.0" text="Model">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblType" alignment="BOTTOM_CENTER" layoutX="304.0" layoutY="133.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D4D4D4;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="306.0" layoutY="109.0" text="Type">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCustomerId" alignment="BOTTOM_CENTER" layoutX="413.0" layoutY="133.0" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #D4D4D4;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="412.0" layoutY="108.0" text="Customer Id">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDiscount" layoutX="22.0" layoutY="10.0" textFill="#d41e1e">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

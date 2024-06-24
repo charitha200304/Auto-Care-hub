@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Feedback_formController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="-2.0" prefHeight="580.0" prefWidth="597.0">
+         <children>
+            <Label layoutX="101.0" layoutY="112.0" text="Feedback Id:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="392.0" layoutY="112.0" text="Description:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="106.0" layoutY="196.0" text="Customer Id:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFeedbackId" layoutX="40.0" layoutY="137.0" onKeyReleased="#txtFeedbackIdKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: F001" />
+            <TextField fx:id="txtDescription" layoutX="313.0" layoutY="135.0" onKeyReleased="#txtDescriptionKeyReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: type" />
+            <JFXButton fx:id="clearbtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="78.0" layoutY="281.0" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #7f8c8d;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/clear.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Savebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="437.0" layoutY="282.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/save.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Updatebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="314.0" layoutY="282.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #e67e22;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/update.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="Deletebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="196.0" layoutY="281.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assest.icon/delete.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <TableView fx:id="tblFeedback" layoutX="32.0" layoutY="369.0" prefHeight="200.0" prefWidth="535.0">
+               <columns>
+                  <TableColumn fx:id="colId" prefWidth="145.0" text="Feedback Id" />
+                  <TableColumn fx:id="colDescription" prefWidth="250.0" text="Description" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="140.0" text="Customer Id" />
+               </columns>
+            </TableView>
+            <Label layoutX="494.0" layoutY="3.0" text="Feedback Page">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="39.0" layoutX="555.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/Feedback%20icon.png" />
+               </image>
+            </ImageView>
+            <JFXComboBox fx:id="cmbCustomerId" layoutX="44.0" layoutY="219.0" prefHeight="33.0" prefWidth="230.0" promptText="Ex: C001" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

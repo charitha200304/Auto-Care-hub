@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.SignUp_formController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="900.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest.icon/Sign%20Up%20-%20Copy.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="TxtFullName" layoutX="541.0" layoutY="129.0" onKeyReleased="#txtFullNameKeyReleased" prefHeight="47.0" prefWidth="329.0" promptText="Full Name" />
+      <TextField fx:id="TxtUserName" layoutX="541.0" layoutY="203.0" onKeyReleased="#txtUserNameKeyReleased" prefHeight="47.0" prefWidth="329.0" promptText="User Name" />
+      <TextField fx:id="TxtEmail" layoutX="541.0" layoutY="277.0" onKeyReleased="#txtEmailKeyReleased" prefHeight="47.0" prefWidth="329.0" promptText="Email" />
+      <TextField fx:id="TxtPhoneNumber" layoutX="542.0" layoutY="351.0" onKeyReleased="#txtPhoneNumberKeyReleased" prefHeight="47.0" prefWidth="329.0" promptText="Phone Number" />
+      <TextField fx:id="TxtPassword" layoutX="541.0" layoutY="425.0" onKeyReleased="#txtPasswordKeyReleased" prefHeight="47.0" prefWidth="329.0" promptText="Password" />
+      <JFXButton fx:id="signUpBtn" layoutX="584.0" layoutY="516.0" onAction="#SignUpBtnOnAction" prefHeight="47.0" prefWidth="236.0" style="-fx-background-color: #003566;" text="Sign up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="38.0" layoutY="22.0" prefHeight="41.0" prefWidth="100.0" text="SERVICE" textFill="#023047">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="116.0" layoutY="22.0" prefHeight="41.0" prefWidth="159.0" text="MANAGEMENT" textFill="#023047">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="88.0" layoutY="50.0" prefHeight="41.0" prefWidth="86.0" text="SYSTEM" textFill="#023047">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="137.0" fitWidth="120.0" layoutX="63.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest.icon/Car%20service%20logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="593.0" layoutY="572.0" text="Already Have An Account ?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="LogInBtn" layoutX="756.0" layoutY="567.0" onAction="#LogInBtnOnAction" text="Log In" textFill="#001aff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Dashboard_formController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="76.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest.icon/near%20user%20id%20icon.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="246.0" layoutY="123.0" text="User id:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserIdLable" layoutX="307.0" layoutY="123.0" text="1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="246.0" layoutY="150.0" text="User Name:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="UserNameLable" layoutX="331.0" layoutY="150.0" text="Charitha">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="72.0" layoutY="310.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #caf0f8; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="73.0" layoutX="26.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/Employee%20attendance%20icon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="53.0" layoutY="171.0" text="Employee attendance">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="fxEmployeeAttendance" layoutX="144.0" prefHeight="45.0" prefWidth="56.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="335.0" layoutY="308.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #caf0f8; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="53.0" layoutY="171.0" text="Daily customer count">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="125.0" fitWidth="89.0" layoutX="12.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/CustomerDashboardIcon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="fxDailyCustomerCount" layoutX="144.0" prefHeight="45.0" prefWidth="56.0">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="520.0" text="Dashboard">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="566.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest.icon/Dashboard%20icon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

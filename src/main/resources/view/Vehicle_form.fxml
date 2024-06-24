@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="paneHolder" prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Vehicle_formController">
+   <children>
+      <Label layoutX="506.0" layoutY="4.0" text="Vehicle Page">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="35.0" fitWidth="33.0" layoutX="557.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assest.icon/car%20icon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtVehicleId" layoutX="54.0" layoutY="99.0" onKeyReleased="#txtVehicleIdReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: V001" />
+      <Label layoutX="133.0" layoutY="76.0" text="Vehicle Id:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtModel" layoutX="326.0" layoutY="99.0" onKeyReleased="#txtVehicleModelReleased" prefHeight="33.0" prefWidth="230.0" promptText="Ex: Civic" />
+      <Label layoutX="421.0" layoutY="76.0" text="Model:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="169.0" text="Type:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbType" layoutX="49.0" layoutY="189.0" prefHeight="33.0" prefWidth="236.0" />
+      <Label layoutX="404.0" layoutY="169.0" text="Customer Id:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbCustomerId" layoutX="322.0" layoutY="189.0" prefHeight="33.0" prefWidth="236.0" />
+      <TableView fx:id="tblVehicle" layoutX="56.0" layoutY="324.0" prefHeight="200.0" prefWidth="501.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+            <TableColumn fx:id="colModel" prefWidth="200.0" text="Model" />
+            <TableColumn fx:id="colType" prefWidth="150.0" text="Type" />
+            <TableColumn fx:id="colCustomerId" prefWidth="75.0" text="C_id" />
+         </columns>
+      </TableView>
+      <JFXButton fx:id="backBtn" layoutX="500.0" layoutY="538.0" onAction="#BackBtnOnAction" prefHeight="20.0" prefWidth="73.0" style="-fx-background-color: #4f5d75;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="Clearbtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="81.0" layoutY="261.0" onAction="#btnClearOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #7f8c8d;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/clear.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Savebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="440.0" layoutY="262.0" onAction="#btnSaveOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2980b9;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Updatebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="317.0" layoutY="262.0" onAction="#btnUpdateOnAction" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #e67e22;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/update.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="Deletebtn" buttonType="RAISED" contentDisplay="RIGHT" layoutX="199.0" layoutY="261.0" onAction="#btnDeleteOnAction" prefHeight="40.0" prefWidth="105.0" style="-fx-background-color: #e74c3c;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assest.icon/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>
