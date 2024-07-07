@@ -44,7 +44,7 @@ getDailyCustomerCount();
         EmployeeAttendanceRepo employeeAttendanceRepo = new EmployeeAttendanceRepo();
 
         try{
-            int count = employeeAttendanceRepo.countemployeeattendance();
+            int count = employeeAttendanceRepo.countEmployeeattendance();
             fxEmployeeAttendance.setText(String.valueOf("0"+count));
 
         } catch (SQLException throwables){

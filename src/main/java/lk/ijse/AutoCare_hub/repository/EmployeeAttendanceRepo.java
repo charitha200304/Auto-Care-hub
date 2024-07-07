@@ -107,7 +107,7 @@ public class EmployeeAttendanceRepo {
         return idList;
     }
 
-    public int countemployeeattendance() throws SQLException {
+    public int countEmployeeattendance() throws SQLException {
         Connection connection = DbConnection.getInstance().getConnection();
         String sql = "SELECT COUNT(Employee_id) FROM attendance";
         PreparedStatement pstm = connection.prepareStatement(sql);
