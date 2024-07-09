@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29a7bc0a-8608-4149-ba26-a88b8c1e2597" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/AutoCare_hub/controller/Dashboard_formController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/AutoCare_hub/controller/Dashboard_formController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lk/ijse/AutoCare_hub/repository/EmployeeAttendanceRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lk/ijse/AutoCare_hub/repository/EmployeeAttendanceRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/AutoCare_hub/controller/Dashboard_formController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/AutoCare_hub/controller/Dashboard_formController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/AutoCare_hub/model/Service_Employee_Details.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lk/ijse/AutoCare_hub/repository/EmployeeAttendanceRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lk/ijse/AutoCare_hub/repository/EmployeeAttendanceRepo.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,15 +27,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IdeaProjects/AutoCare hub&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Ms Computers/IdeaProjects/AutoCarehub"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +52,9 @@
       <workItem from="1719840124012" duration="609000" />
       <workItem from="1719914231621" duration="86000" />
       <workItem from="1720089655869" duration="619000" />
-      <workItem from="1720349528129" duration="8876000" />
+      <workItem from="1720349528129" duration="11290000" />
+      <workItem from="1720440581075" duration="2292000" />
+      <workItem from="1720519094065" duration="2301000" />
     </task>
     <task id="LOCAL-00001" summary="1st commit">
       <created>1719226100384</created>
@@ -68,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1719226571073</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2nd commit">
+      <created>1720361711860</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720361711860</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,6 +85,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1st commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1st commit" />
+    <MESSAGE value="2nd commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2nd commit" />
   </component>
 </project>

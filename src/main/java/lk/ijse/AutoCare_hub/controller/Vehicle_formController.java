@@ -143,7 +143,7 @@ public class Vehicle_formController {
         String V_id = txtVehicleId.getText();
 
         try {
-            boolean isDeleted = PaymentRepo.delete(V_id);
+            boolean isDeleted = VehicleRepo.delete(V_id);
             if (isDeleted) {
                 new Alert(Alert.AlertType.CONFIRMATION, "deleted!").show();
             }
