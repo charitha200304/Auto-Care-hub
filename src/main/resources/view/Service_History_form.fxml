@@ -14,7 +14,7 @@
 
 <AnchorPane fx:id="paneHolder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.AutoCare_hub.controller.Service_History_formController">
    <children>
-      <AnchorPane fx:id="paneHolder" layoutX="-2.0" layoutY="-3.0" prefHeight="580.0" prefWidth="597.0">
+      <AnchorPane layoutX="-2.0" layoutY="-3.0" prefHeight="580.0" prefWidth="597.0">
          <children>
             <Label layoutX="102.0" layoutY="88.0" text="Service History Id:">
                <font>

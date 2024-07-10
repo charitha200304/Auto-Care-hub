@@ -75,6 +75,7 @@ public class Point_DetailsController {
     @FXML
     private Label lblServiceHistoryId;
 
+
     private List<Point_System> point_systemList = new ArrayList<>();
     public void initialize() {
         this.point_systemList = getAllPontSystem();
